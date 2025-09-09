@@ -9,9 +9,7 @@ class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = [];
-	//So Many Options : |
-	var menuItemsOG:Array<String> = [
+	var menuItems:Array<String> = [
 		'Resume',
 		'Restart Song',
 		#if mobile, 'Chart Editor' #end,
@@ -96,7 +94,7 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
-		var blueballedTxt:FlxText = new FlxText(20, 15 + 64, 0, "Blueballed: " + PlayState.deathCounter,32);
+		var blueballedTxt:FlxText = new FlxText(20, 15 + 64, 0, "Brainwashed: " + PlayState.deathCounter,32);
 		blueballedTxt.scrollFactor.set();
 		blueballedTxt.setFormat(Paths.font('vcr.ttf'), 32);
 		blueballedTxt.updateHitbox();
