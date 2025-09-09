@@ -1,6 +1,7 @@
 package;
 
 import flixel.util.FlxStringUtil;
+import options.OptionsState;
 import editors.ChartingState;
 import flixel.addons.transition.FlxTransitionableState;
 
