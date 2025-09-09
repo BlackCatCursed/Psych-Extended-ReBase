@@ -3378,7 +3378,7 @@ class PlayState extends MusicBeatState
 
 		if (!boyfriend.stunned)
 		{
-			health -= 0.115 * healthLoss;
+			health -= 0.085 * healthLoss;
 			if(instakillOnMiss)
 			{
 				vocals.volume = 0;
@@ -3425,9 +3425,6 @@ class PlayState extends MusicBeatState
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 			
-						        if (health > 0.1) {setProperty('health', getProperty('health') - 0.025);
-        }
-        }
         
 
 		if(note.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
@@ -3476,6 +3473,7 @@ class PlayState extends MusicBeatState
 			note.destroy();
 		}
 	}
+      health -= 0.015 * healthLoss;
 
 	function goodNoteHit(note:Note):Void
 	{
