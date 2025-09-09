@@ -3424,6 +3424,11 @@ class PlayState extends MusicBeatState
 	{
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
+			
+						        if (health > 0.1) {setProperty('health', getProperty('health') - 0.025);
+        }
+        }
+        
 
 		if(note.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
 			dad.playAnim('hey', true);
@@ -3439,10 +3444,6 @@ class PlayState extends MusicBeatState
 				}
 			}
 			
-			        if (health > 0.1) { // Or your desired minimum health value
-            setProperty('health', getProperty('health') - 0.025);
-        }
-        }
 
 			var char:Character = dad;
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
