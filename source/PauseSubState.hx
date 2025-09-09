@@ -1,7 +1,6 @@
 package;
 
 import flixel.util.FlxStringUtil;
-import options.OptionsState;
 import editors.ChartingState;
 import flixel.addons.transition.FlxTransitionableState;
 
@@ -9,7 +8,9 @@ class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = [
+	var menuItems:Array<String> = [];
+	//So Many Options : |
+	var menuItemsOG:Array<String> = [
 		'Resume',
 		'Restart Song',
 		#if mobile, 'Chart Editor' #end,
