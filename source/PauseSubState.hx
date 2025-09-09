@@ -13,7 +13,7 @@ class PauseSubState extends MusicBeatSubstate
 	//So Many Options : |
 	var menuItemsOG:Array<String> = [
 		'Resume',
-		'Restart Song',
+		'Restart Song'
 		#if mobile, 'Chart Editor' #end,
 		'Exit to menu'
 	];
