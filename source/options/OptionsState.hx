@@ -26,8 +26,7 @@ class OptionsState extends MusicBeatState
 		'Graphics',
 		'Visual & UI',
 		'Gameplay',
-		'Controls',
-		'Note Skins'
+		'Controls'
 	];
 
 	////////////////////////////////////////////////////////////////////////////////////////////
