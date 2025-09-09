@@ -3468,12 +3468,13 @@ class PlayState extends MusicBeatState
 
 		if (!note.isSustainNote)
 		{
+		health -= 0.015 * healthLoss;
 			note.kill();
 			notes.remove(note, true);
 			note.destroy();
 		}
 	}
-      health -= 0.015 * healthLoss;
+      
 
 	function goodNoteHit(note:Note):Void
 	{
