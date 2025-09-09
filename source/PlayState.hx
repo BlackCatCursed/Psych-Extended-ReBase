@@ -3442,6 +3442,7 @@ class PlayState extends MusicBeatState
 			        if (health > 0.1) { // Or your desired minimum health value
             setProperty('health', getProperty('health') - 0.025);
         }
+        }
 
 			var char:Character = dad;
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
