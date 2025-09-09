@@ -2756,12 +2756,12 @@ class PlayState extends MusicBeatState
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+					health -= 0.115 * healthLoss;
 				}
 			});
 			for (daNote in unspawnNotes) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+					health -= 0.115 * healthLoss;
 				}
 			}
 
@@ -3378,7 +3378,7 @@ class PlayState extends MusicBeatState
 
 		if (!boyfriend.stunned)
 		{
-			health -= 0.05 * healthLoss;
+			health -= 0.115 * healthLoss;
 			if(instakillOnMiss)
 			{
 				vocals.volume = 0;
@@ -3438,6 +3438,10 @@ class PlayState extends MusicBeatState
 					altAnim = '-alt';
 				}
 			}
+			
+			        if (health > 0.1) { // Or your desired minimum health value
+            setProperty('health', getProperty('health') - 0.025);
+        }
 
 			var char:Character = dad;
 			var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))] + altAnim;
